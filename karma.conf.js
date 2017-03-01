@@ -59,14 +59,15 @@ module.exports = (config) => {
 
     browsers: [ 'Chrome' ],
     frameworks: [ 'mocha' ],
-    reporters: [ 'mocha' ],
+    reporters: [ 'mocha', 'coverage' ],
 
     files: [
       'tests.webpack.js'
     ],
 
     preprocessors: {
-      'tests.webpack.js': [ 'webpack', 'sourcemap' ]
+      // 'modules/*.js': [ 'coverage' ],
+      'tests.webpack.js': [ 'webpack', 'sourcemap', 'coverage' ]
     },
 
     webpack: {
